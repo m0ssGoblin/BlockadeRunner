@@ -4,7 +4,6 @@ Blockade Runner is a game about running from the space cops and dodging missiles
 
 Blockade Runner is inspired by need for speed hot pursuit, pod-racing, crazy taxi, asteroids, and many more games. 
 
-
 Blockade Runner is our first game. Keep It Stupid Simple.
 
 Our deadline is September 15th for a fully functional compiled and ready product.
