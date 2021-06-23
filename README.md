@@ -5,3 +5,5 @@ Blockade Runner is a game about hurtlign through space, dodgin asteroids, and ou
 Blockade Runner is inspired by need for speed, pod-racing, and asteroids.
 
 Blockade Runner is our first game so KISS.
+
+Blockade Runner will be done by Spetember 22 2021
