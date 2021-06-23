@@ -6,4 +6,4 @@ Blockade Runner is inspired by need for speed, pod-racing, and asteroids.
 
 Blockade Runner is our first game so KISS.
 
-Blockade Runner will be done by Spetember 22 2021
+Blockade Runner will be done by Spetember 22 2021.
