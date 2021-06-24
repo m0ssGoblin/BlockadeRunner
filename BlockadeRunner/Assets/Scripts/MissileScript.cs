@@ -15,8 +15,7 @@ public class MissileScript : MonoBehaviour
     private int homeSpeed = 10000;
     GameObject target;
     GameObject missile;
-    float spawnTime;
-    int distanceToCoast = 50;
+    float spawnTime;    
     public GameObject explosionEffect;
     public int explosionRadius = 5;
     int explosionForce = 3000;

@@ -64,7 +64,6 @@ public class EnemyShipAITest : MonoBehaviour
 
         Rb.velocity = (Vector3.zero);
         Rb.AddRelativeForce(Vector3.forward * speed);
-        Debug.Log(speed);
     }
     void orient()
     {
