@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretScript : MonoBehaviour
 {
 
-    Transform transform;
+    Transform turret;
     Rigidbody Rb;
     GameObject target;
     
@@ -29,7 +29,7 @@ public class TurretScript : MonoBehaviour
 
     private void Update()
     {
-        transform = GetComponent<Transform>();
+        turret = GetComponent<Transform>();
         Rb = GetComponent<Rigidbody>();
         target = GameObject.FindGameObjectWithTag("Player");
         targetTransform = target.GetComponent<Transform>();
@@ -57,7 +57,7 @@ public class TurretScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform = GetComponent<Transform>();
+        turret = GetComponent<Transform>();
         Rb = GetComponent<Rigidbody>();
         target = GameObject.FindGameObjectWithTag("Player");
         targetTransform = target.GetComponent<Transform>();
@@ -75,7 +75,7 @@ public class TurretScript : MonoBehaviour
 
     void track()
     {
-        transform = GetComponent<Transform>();
+        turret = GetComponent<Transform>();
         Rb = GetComponent<Rigidbody>();
         target = GameObject.FindGameObjectWithTag("Player");
         targetTransform = target.GetComponent<Transform>();

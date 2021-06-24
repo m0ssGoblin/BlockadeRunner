@@ -22,7 +22,7 @@ public class shipStatus : MonoBehaviour
     public Vector3 Velocity;
 
 [Header("Ship Controller variables")]
-    V2ShipController shipController;
+    ShipController shipController;
 
     // Start is called before the first frame update
     void Start()
@@ -33,16 +33,14 @@ public class shipStatus : MonoBehaviour
         boostText.SetActive(false);
         dampenerText.SetActive(true);
 
-        shipController = GetComponent<V2ShipController>();
+        shipController = GetComponent<ShipController>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //Velocity UI 
-
         int maxVelocity = shipController.maxVelocity;
         int absoluteVelocityInt = Mathf.Abs((int)rb.velocity.magnitude);
         velocitySlider.value = absoluteVelocityInt/maxVelocity;

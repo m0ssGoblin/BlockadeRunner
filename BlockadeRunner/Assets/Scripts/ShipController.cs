@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class V2ShipController : MonoBehaviour
+public class ShipController : MonoBehaviour
 {
     Rigidbody rb;
 

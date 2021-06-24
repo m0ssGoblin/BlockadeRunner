@@ -43,8 +43,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -136,8 +136,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -229,8 +229,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -356,8 +356,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -449,8 +449,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -613,7 +613,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6172807086694741116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d9e4a6a69e6c844ba9469ea7b5d38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5220796137572560186}
+  projectile: {fileID: 0}
   explosion: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
 --- !u!1 &5220796138082554095
 GameObject:
@@ -671,8 +671,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -764,8 +764,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -891,8 +891,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.08086252, b: 0.98648345, a: 1}
-  m_Intensity: 10
-  m_Range: 250
+  m_Intensity: 5
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

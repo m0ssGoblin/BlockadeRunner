@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipAITest : MonoBehaviour
+public class EnemyShipAI : MonoBehaviour
 {
      public Rigidbody Rb; 
     public Transform shipTransform;
@@ -15,23 +15,32 @@ public class EnemyShipAITest : MonoBehaviour
 
     int weaponRange;
 
-    public int stoppingDistance = 0;
+    public int stoppingDistance = 500;
 
     public float speedDistanceConstant = 100000;
 
+    public GameObject explosion;
 
+    public float health = 1000;
+
+    public float damageConstant =1;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        LaserTurretScript LaserTurretScript=  GetComponent<LaserTurretScript>();
+        //set weapon range equal to the value set in the turretScript
+        LaserTurretScript LaserTurretScript=  GetComponent<LaserTurretScript>();       
         weaponRange = LaserTurretScript.range;              
     }
 
     // Update is called once per frame
     void Update()
     {
+        if( health < 0)
+        {
+            death();
+        }
         
     }
 
@@ -74,5 +83,16 @@ public class EnemyShipAITest : MonoBehaviour
 
         Rb.MoveRotation(Quaternion.Lerp(shipTransform.rotation, targetRotation, rotationSpeed));
      
+    }
+
+    private void OnCollisionEnter(Collision collider) 
+    {
+        health -= collider.impulse.magnitude * damageConstant;        
+    }
+
+    public void death()
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }
