@@ -88,7 +88,6 @@ public class shipStatus : MonoBehaviour
         {
         float damage = collider.impulse.magnitude * damageConstant;
         healthValue -= (int)damage;
-        Debug.Log(healthValue);
         }
 
     }

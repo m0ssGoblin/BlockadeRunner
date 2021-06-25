@@ -9,6 +9,7 @@ public class GoalScript : MonoBehaviour
     public bool goalReached = false;
     public bool pointsAdded = false;
     public int pointValue = 100;
+    public bool timeLogged = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,22 +25,36 @@ public class GoalScript : MonoBehaviour
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player"); 
         player = playerObject.GetComponent<Transform>();
 
-        if( Vector3.Distance(player.position , goal.position) < (goal.localScale.magnitude / 1.5) )
+        if( Vector3.Distance(player.position , goal.position) < (goal.localScale.magnitude / 1.5) && !goalReached)
         {
-            Debug.Log(Vector3.Distance(player.position , goal.position) + (goal.localScale.magnitude / 2));
             Destroy(this.gameObject);
             goalReached = true;
             pointAdder();
-        }
+
+            //log the time once
+            if(!timeLogged)
+            {
+                timeLogger();
+            }
+        }        
     }
 
     void pointAdder()
     {
-        //get access ot gamemanager script and points variable so we can add points 
+        //get access to gamemanager script and points variable so we can add points 
         GameObject gamemanagerObject = GameObject.FindGameObjectWithTag("Manager");
         GameManager manager = gamemanagerObject.GetComponent<GameManager>();
-        manager.points += pointValue;
+        manager.pointsToAdd += pointValue;
+        manager.numberOfGoalsReached += 1;
         pointsAdded = true;
+        
+    }
+    void timeLogger()
+    {
+        GameObject gamemanagerObject = GameObject.FindGameObjectWithTag("Manager");
+        GameManager manager = gamemanagerObject.GetComponent<GameManager>();
+        manager.timeOfCurrentGoal = Time.time;
+        timeLogged = true;
     }
 
     
