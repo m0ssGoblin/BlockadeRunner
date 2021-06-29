@@ -10,4 +10,5 @@ Blockade Runner is our first game. Keep It Stupid Simple.
 Our deadline is September 15th for a fully functional compiled and ready product.
 
 Contributors
+offelia
 thelley
