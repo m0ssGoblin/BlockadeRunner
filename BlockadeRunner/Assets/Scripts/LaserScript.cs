@@ -8,15 +8,15 @@ public class LaserScript : MonoBehaviour
     Rigidbody targetRb;
     Transform targetTransform;
     Transform projectileTransform;
-    public GameObject projectile;
+    GameObject projectile;
     GameObject target;
     public GameObject explosion;
     Vector3 targetPosition;
     Vector3 projectilePositon;
-    int speed = 5000000;
+    int speed = 500000;
     Rigidbody rb;
     int blastRadius = 50;
-    int explosionForce = 10000;
+    int explosionForce = 1000;
 
     int maximumDistance = 50000;
 
@@ -49,7 +49,7 @@ public class LaserScript : MonoBehaviour
 
     void shoot()
     {
-        projectileRB.AddRelativeForce(Vector3.forward * speed*Time.deltaTime);
+        projectileRB.AddRelativeForce(Vector3.forward * speed * Time.deltaTime);
 
         //projectileRB.AddForce((targetPosition - projectilePositon).normalized * speed);
     }

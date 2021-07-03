@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public float timeOfCurrentGoal = 0;    
     public float timeOfLastGoal = 0;
     public int timeBetweenGoals = 0;
-    public int totalGoals = 4;     
+    public int totalGoalsInScene = 10;     
    
     
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         playerScoreText.text = playerScore.ToString("0");
 
         //end the scene and load the level ciomplete scene if all thegaosl are collected
-        if(numberOfGoalsReached == 4)
+        if(numberOfGoalsReached == totalGoalsInScene)
         {  
         endScene();
         }

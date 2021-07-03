@@ -21,7 +21,8 @@ public class cameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("c"))
+        Debug.Log(Input.GetAxisRaw("Camera"));
+        if (Input.GetAxisRaw("Camera") != 0)
         {
             activeCamera = !activeCamera;
         }

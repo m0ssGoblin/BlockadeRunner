@@ -22,7 +22,7 @@ public class shipStatus : MonoBehaviour
     public Vector3 Velocity;
 
 [Header("Ship Controller variables")]
-    ShipController shipController;
+    TestController TestController;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class shipStatus : MonoBehaviour
         boostText.SetActive(false);
         dampenerText.SetActive(true);
 
-        shipController = GetComponent<ShipController>();
+        TestController = GetComponent<TestController>();
         
     }
 
@@ -41,7 +41,7 @@ public class shipStatus : MonoBehaviour
     void Update()
     {
         //Velocity UI 
-        int maxVelocity = shipController.maxVelocity;
+        int maxVelocity = TestController.maxVelocity;
         int absoluteVelocityInt = Mathf.Abs((int)rb.velocity.magnitude);
         velocitySlider.value = absoluteVelocityInt/maxVelocity;
         velocityText.text = absoluteVelocityInt.ToString("0");    
@@ -53,7 +53,7 @@ public class shipStatus : MonoBehaviour
 
 
         //Dampener UI 
-        if(shipController.dampenersEngaged)
+        if(TestController.dampenersEngaged)
         {
             dampenerText.SetActive(true);
         }
@@ -63,7 +63,7 @@ public class shipStatus : MonoBehaviour
         }
 
         //Boost UI 
-        if(shipController.boostEngaged)
+        if(TestController.boostEngaged)
         {
             boostText.SetActive(true);
         }

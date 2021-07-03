@@ -22,10 +22,10 @@ public class ShipController : MonoBehaviour
 
     [Header("Dampener Variables")] 
     public bool dampenersEngaged = true;
-    public float dampenerDrag = .25f;
+    float dampenerDrag = 1.5f;
     float normalAngularDrag = .5f;
-    public float angularDampener = 1.5f;
-    public Vector3 currentAngularVelocty;
+    float angularDampener = 1.5f;
+    Vector3 currentAngularVelocty;
 
 
 // Start is called before the first frame update
@@ -122,7 +122,7 @@ private void Start()
         }
         else
         {
-            rb.drag = 0f;
+            rb.drag = 1f;
         }
 
         rb.AddRelativeForce(activeStrafeSpeed, activeHoverSpeed, activeForwardSpeed);
